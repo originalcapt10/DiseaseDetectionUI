@@ -1,0 +1,27 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.uploaded-image-div{
+  max-width: 100%;
+  margin-bottom: 5%;
+}
+
+.uploaded-image{
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+.image-upload-component{
+  margin-bottom: 5%;
+}
+
+.parent-container{
+  width: 100%;
+  height: auto;
+}
+
