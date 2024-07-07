@@ -1,14 +1,16 @@
 import { createRef } from "react";
 import "./ImageUpload.css";
 
-function ImageUpload({ updateImage, uploadedImage }) {
+function ImageUpload({ updateImage, uploadedImage, updateResult }) {
   const fileInputRef = createRef();
 
   const handleUpload = (event) => {
+    updateResult(null);
     updateImage(event.target.files[0]);
   };
 
   const deleteImage = () => {
+    updateResult(null);
     updateImage(null);
   };
 

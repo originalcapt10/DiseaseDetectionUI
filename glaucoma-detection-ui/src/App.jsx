@@ -1,10 +1,12 @@
 import { useState } from "react";
 import "./App.css";
 import ImageUpload from "./ImageUpload";
+import ImageAnalysis from "./ImageAnalysis";
 
 function App() {
   const [uploadedImage, setUploadedImage] = useState(null);
-  console.log(uploadedImage, "the uploaded Image");
+  const [analysisResult, setAnalysisResult] = useState(null);
+
   return (
     <>
       <div className="parent-container">
@@ -17,13 +19,22 @@ function App() {
             />
           </div>
         )}
-        <br />
+        {analysisResult}
         <div className="image-upload-component">
           <ImageUpload
             updateImage={setUploadedImage}
             uploadedImage={uploadedImage}
+            updateResult={setAnalysisResult}
           />
         </div>
+        {uploadedImage && (
+          <div>
+            <ImageAnalysis
+              imageToBeAnalyzed={uploadedImage}
+              updateAnalysis={setAnalysisResult}
+            />
+          </div>
+        )}
       </div>
     </>
   );

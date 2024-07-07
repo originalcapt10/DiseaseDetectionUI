@@ -17,11 +17,12 @@
 }
 
 .image-upload-component{
-  margin-bottom: 5%;
+  margin: 5%;
 }
 
 .parent-container{
   width: 100%;
   height: auto;
+  margin-bottom: 5%;
 }
 
