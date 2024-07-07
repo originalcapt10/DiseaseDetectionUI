@@ -1,7 +1,7 @@
 import axios from "axios";
 
 function ImageAnalysis({ imageToBeAnalyzed, updateAnalysis }) {
-  const handleAnalyzeClick = ({ imageToBeAnalyzed }) => {
+  const handleAnalyzeClick = () => {
     const formData = new FormData();
     formData.append("image", imageToBeAnalyzed);
     axios
