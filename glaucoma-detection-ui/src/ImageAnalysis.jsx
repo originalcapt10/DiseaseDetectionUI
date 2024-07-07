@@ -11,7 +11,7 @@ function ImageAnalysis({ imageToBeAnalyzed, updateAnalysis }) {
         updateAnalysis(res);
       })
       .catch((err) => {
-        console.error("Error Analyzing The Image");
+        console.error("Error Analyzing The Image:", err);
       });
   };
 
